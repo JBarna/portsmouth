@@ -38,7 +38,7 @@ plugins:
 collections:
   reviews:
     output: true
-    sort_by: type
+    # sort_by: type # Potentially useful as it groups by type but it doesn't necessarily allow us to control the order
   # - items  
 
 # Exclude from processing.

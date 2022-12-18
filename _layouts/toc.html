@@ -4,27 +4,32 @@
     <p class="section-title">Cafes</p>
     {% assign cafe_reviews = site.reviews | where: "type", "cafe" %}
     {% for review in cafe_reviews %}
-    {% if review.type == "cafe" %}
     <a href="{{ review.url }}">
     <div class="toc-row">
             <div class="toc-name"><span>{{review.name}}</span></div>
             <div class="toc-page-number">{{ forloop.index | times: 2 | plus: 1 }}</div>
     </div>
-</a>
+
+    <!-- 
+        Hacky way of storing the length of the cafes 
+        since there is no length property on cafe_reviews
+    -->
+    {% if forloop.last %}
+        {% assign cafe_reviews_length = forloop.length %}
     {% endif %}
+</a>
     {% endfor %}
 </div>
 <div class="page">
     <p class="section-title">Restaurants</p>
-    {% for review in site.reviews %}
-    {% if review.type == "dinner" %}
+    {% assign dinner_reviews = site.reviews | where: "type", "dinner" %}
+    {% for review in dinner_reviews %}
     <a href="{{ review.url }}">
         <div class="toc-row">
                 <div class="toc-name"><span>{{review.name}}</span></div>
-                <div class="toc-page-number">{{ forloop.index | times: 2 | plus: 1 }}</div>
+                <div class="toc-page-number">{{ forloop.index | plus: cafe_reviews_length | times: 2 | plus: 1  }}</div>
         </div>
     </a>
-    {% endif %}
     {% endfor %}
 </div>
 {% include page-footer.html %}
