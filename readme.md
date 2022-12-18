@@ -33,3 +33,7 @@ Liquid Documentation => https://shopify.github.io/liquid/
 ### Presentation
 Codepen for book layout => https://codepen.io/vanthanh1501/pen/jLejvR
 Making two columns => https://www.geeksforgeeks.org/how-to-define-two-column-layout-using-flexbox/
+
+
+### Using GIT
+GIT_SSH_COMMAND="ssh -i ~/.ssh/id_personal" [git command]
