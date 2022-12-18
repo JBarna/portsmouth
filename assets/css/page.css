@@ -248,6 +248,15 @@ body {
         z-index: 1;
     }
 
+    .open-book > article {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .page {
+        width: 50%
+    }
+
     /* Header/Footer */
     .open-book header:before,
     .open-book header:after,

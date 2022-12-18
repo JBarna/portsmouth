@@ -1,11 +1,16 @@
 {% include page-header.html %}
-<h2 class="chapter-title">{{page.name}}</h2>
+<div class="page">
+    <h2 class="chapter-title">{{page.name}}</h2>
+    {{content}}
+</div>
+<div class="page">
+    No content on second page :D
+</div>
 
 <!-- 
     So if there is an extra newline between the content in the collection content
     then it will wrap that automatically in a <p> element which works nicely with the format.
 -->
-{{content}}
 <!-- <p>
     Sublime Text 2 was opened and a new document was created. "I love this time of year," Erin gleefully thought to herself.
 </p>
