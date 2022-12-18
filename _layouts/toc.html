@@ -4,7 +4,7 @@
     <p class="section-title">Cafes</p>
     {% assign cafe_reviews = site.reviews | where: "type", "cafe" %}
     {% for review in cafe_reviews %}
-    <a href="{{ review.url }}">
+    <a href="{{ review.url | relative_url }}">
     <div class="toc-row">
             <div class="toc-name"><span>{{review.name}}</span></div>
             <div class="toc-page-number">{{ forloop.index | times: 2 | plus: 1 }}</div>
@@ -24,7 +24,7 @@
     <p class="section-title">Restaurants</p>
     {% assign dinner_reviews = site.reviews | where: "type", "dinner" %}
     {% for review in dinner_reviews %}
-    <a href="{{ review.url }}">
+    <a href="{{ review.url | relative_url }}">
         <div class="toc-row">
                 <div class="toc-name"><span>{{review.name}}</span></div>
                 <div class="toc-page-number">{{ forloop.index | plus: cafe_reviews_length | times: 2 | plus: 1  }}</div>
