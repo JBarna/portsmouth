@@ -7,13 +7,3 @@ type: cafe
 layout: page
 ---
 I love their bagels
-
-More content
-
-More content
-
-More content
-
-More content
-
-More content

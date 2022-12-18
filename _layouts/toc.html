@@ -1,7 +1,7 @@
 {% include page-header.html %}
 <div class="page">
     <h2 class="chapter-title">Table of Contents</h2>
-    <p class="section-title">Cafes</p>
+    <p class="section-title">Breakfast & Cafes</p>
     {% assign cafe_reviews = site.reviews | where: "type", "cafe" %}
     {% for review in cafe_reviews %}
     <a href="{{ review.url | relative_url }}">
@@ -21,13 +21,44 @@
     {% endfor %}
 </div>
 <div class="page">
-    <p class="section-title">Restaurants</p>
+    <!-- LUNCH AND DELI -->
+    <p class="section-title">Lunch & Deli</p>
+    {% assign lunch_reviews = site.reviews | where: "type", "lunch" %}
+    {% for review in lunch_reviews %}
+    <a href="{{ review.url | relative_url }}">
+        <div class="toc-row">
+                <div class="toc-name"><span>{{review.name}}</span></div>
+                <div class="toc-page-number">{{ forloop.index | plus: cafe_reviews_length | times: 2 | plus: 1  }}</div>
+        </div>
+    </a>
+    {% if forloop.last %}
+        {% assign lunch_reviews_length = forloop.length | plus: cafe_reviews_length %}
+    {% endif %}
+    {% endfor %}
+
+    <!-- DINNER -->
+    <p class="section-title">Dinner</p>
     {% assign dinner_reviews = site.reviews | where: "type", "dinner" %}
     {% for review in dinner_reviews %}
     <a href="{{ review.url | relative_url }}">
         <div class="toc-row">
                 <div class="toc-name"><span>{{review.name}}</span></div>
-                <div class="toc-page-number">{{ forloop.index | plus: cafe_reviews_length | times: 2 | plus: 1  }}</div>
+                <div class="toc-page-number">{{ forloop.index | plus: lunch_reviews_length | times: 2 | plus: 1  }}</div>
+        </div>
+    </a>
+    {% if forloop.last %}
+        {% assign dinner_reviews_length = forloop.length | plus: lunch_reviews_length %}
+    {% endif %}
+    {% endfor %}
+
+    <!-- SWEETS -->
+    <p class="section-title">Sweets & Desserts</p>
+    {% assign dinner_reviews = site.reviews | where: "type", "sweet" %}
+    {% for review in dinner_reviews %}
+    <a href="{{ review.url | relative_url }}">
+        <div class="toc-row">
+                <div class="toc-name"><span>{{review.name}}</span></div>
+                <div class="toc-page-number">{{ forloop.index | plus: dinner_reviews_length | times: 2 | plus: 1  }}</div>
         </div>
     </a>
     {% endfor %}

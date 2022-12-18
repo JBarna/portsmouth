@@ -6,14 +6,4 @@ vibe: 5
 layout: page
 type: dinner
 ---
-Their eclair is wonderful!
-
-More content
-
-More content
-
-More content
-
-More content
-
-More content
+Incredible sea food. Just go there
