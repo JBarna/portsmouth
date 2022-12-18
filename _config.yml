@@ -20,7 +20,7 @@
 
 title: Portsmouth Reviews
 email: jb@portsmouth.com
-author: Joel Sir Thomas
+author: Sir Joel
 description: >- # this means to ignore newlines until "baseurl:"
   I review Portsmouth, cool right?
 baseurl: "" # the subpath of your site, e.g. /blog
