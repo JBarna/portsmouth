@@ -4,7 +4,9 @@
 
         <section class="open-book">
             <header>
-                <h1>{{site.title}}</h1>
-                <h6>{{site.author}}</h6>
+                {% if page.name != "toc.html" %}
+                    <h1><a href="{{ '/' | relative_url }}">< {{page.name}} </a></h1>
+                {% endif %}
+                <h6>{{site.title}} by {{site.author}}</h6>
             </header>
                 <article>

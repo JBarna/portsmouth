@@ -38,6 +38,7 @@ plugins:
 collections:
   reviews:
     output: true
+    sort_by: type
   # - items  
 
 # Exclude from processing.

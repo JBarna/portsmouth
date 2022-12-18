@@ -1,4 +1,30 @@
-{% include header.html %}
-    <p> can you see this?</p>
-{% include footer.html %}
-
+{% include page-header.html %}
+<div class="page">
+    <h2 class="chapter-title">Table of Contents</h2>
+    <p class="section-title">Cafes</p>
+    {% assign cafe_reviews = site.reviews | where: "type", "cafe" %}
+    {% for review in cafe_reviews %}
+    {% if review.type == "cafe" %}
+    <a href="{{ review.url }}">
+    <div class="toc-row">
+            <div class="toc-name"><span>{{review.name}}</span></div>
+            <div class="toc-page-number">{{ forloop.index | times: 2 | plus: 1 }}</div>
+    </div>
+</a>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="page">
+    <p class="section-title">Restaurants</p>
+    {% for review in site.reviews %}
+    {% if review.type == "dinner" %}
+    <a href="{{ review.url }}">
+        <div class="toc-row">
+                <div class="toc-name"><span>{{review.name}}</span></div>
+                <div class="toc-page-number">{{ forloop.index | times: 2 | plus: 1 }}</div>
+        </div>
+    </a>
+    {% endif %}
+    {% endfor %}
+</div>
+{% include page-footer.html %}

@@ -1,10 +1,10 @@
 ---
-name: Popovers on the Square
+name: Surf
 location: Downtown
-rating: 4
+rating: 5
 vibe: 5
 layout: page
-type: cafe
+type: dinner
 ---
 Their eclair is wonderful!
 

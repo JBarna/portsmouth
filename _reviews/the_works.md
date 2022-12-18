@@ -1,12 +1,12 @@
 ---
-name: Popovers on the Square
+name: The Works
 location: Downtown
 rating: 4
 vibe: 5
-layout: page
 type: cafe
+layout: page
 ---
-Their eclair is wonderful!
+I love their bagels
 
 More content
 

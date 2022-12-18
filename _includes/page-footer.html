@@ -1,8 +1,13 @@
 </article>
 <footer>
     <ol id="page-numbers">
-        <li>1</li>
-        <li>2</li>
+        {% for review in site.reviews %}
+        {% if review.name == page.name %}
+            <li>{{ forloop.index | times: 2 | plus: 1 }}</li>
+            <li>{{ forloop.index | times: 2 | plus: 2 }}</li>
+            {% break %}
+        {% endif %}
+        {% endfor %}
     </ol>
 </footer>
 </section>
