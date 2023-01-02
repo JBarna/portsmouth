@@ -152,6 +152,7 @@ body {
 }
 
 .open-book article p.section-title {
+    margin-top: 1em !important;
     text-indent: 0em;
 }
 
@@ -252,7 +253,8 @@ a {
 
 
 /*** MEDIA QUERIES ***/
-@media only screen and ( min-width: 50em ) {
+/* Assuming a font-size of 16px, 63em converts to 1008 pixels wide */
+@media only screen and ( min-width: 63em ) { 
 
     .open-book {
         margin: 1em;
@@ -403,11 +405,6 @@ a {
     /* Body Copy */
     .open-book article p {
         text-indent: 3em;
-    }
-
-    .open-book article p.section-title {
-        text-indent: 0em;
-        margin-top: 1em !important;
     }
 
     .open-book article > ul,
