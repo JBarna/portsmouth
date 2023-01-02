@@ -55,6 +55,22 @@ body {
     flex-shrink: 0;
 }
 
+/* Map Embed */
+.map-wrapper {
+    overflow: hidden
+}
+
+.map-wrapper iframe {
+    /* These are the minimum sizes required to cover up the buttons on the top and bottom */
+    /* margin-top: -127px;
+    margin-bottom: -114px; */
+
+    margin-top: -170px !important;
+    margin-bottom: -210px !important;
+    pointer-events: none;
+    filter: grayscale(0.9);
+}
+
 .open-book * {
     position: relative;
 }
