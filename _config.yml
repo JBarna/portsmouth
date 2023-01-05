@@ -41,6 +41,8 @@ collections:
     # sort_by: type # Potentially useful as it groups by type but it doesn't necessarily allow us to control the order
   # - items  
 
+include:
+  - CNAME
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
