@@ -1,0 +1,12 @@
+name: Pull reviews
+
+on:
+  schedule:
+  - cron: '0 8 * * *'
+
+jobs:
+  pull-and-parse:
+  
+
+# https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-from-the-same-repository
+# https://github.com/stefanzweifel/git-auto-commit-action
