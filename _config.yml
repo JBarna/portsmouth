@@ -23,7 +23,7 @@ email: jb@portsmouth.com
 author: Sir Joel
 description: >- # this means to ignore newlines until "baseurl:"
   I review Portsmouth, cool right?
-baseurl: "/portsmouth" # the subpath of your site, e.g. /blog
+# baseurl: "/portsmouth" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
