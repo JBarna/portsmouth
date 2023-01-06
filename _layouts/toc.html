@@ -3,10 +3,11 @@
     <h2 class="chapter-title">Table of Contents</h2>
     <p class="section-title">Breakfast & Cafes</p>
     {% assign cafe_reviews = site.reviews | where: "type", "cafe" %}
-    {% for review in cafe_reviews %}
+    {% for review in site.reviews %}    
+    {% assign review_data = site.data.reviews[review.key] %}
     <a href="{{ review.url | relative_url }}">
     <div class="toc-row">
-            <div class="toc-name"><span>{{review.name}}</span></div>
+            <div class="toc-name"><span>{{review_data.name}}</span></div>
             <div class="toc-page-number">{{ forloop.index | times: 2 | plus: 1 }}</div>
     </div>
 

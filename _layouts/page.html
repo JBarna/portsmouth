@@ -1,13 +1,13 @@
 {% include page-header.html %}
-{% assign page_base_name = page.name | split: "." | first %}
-{% assign page_data = site.data.reviews[page_base_name]}
+{% assign page_data = site.data.reviews[page.key] %}
 <div class="page">
     <h2 class="chapter-title">{{page_data.name}}</h2>
     <div class="map-wrapper">
         <iframe width="100%" height="600px" frameborder="0" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=350px&amp;hl=en&amp;q={{'15 Portwalk Pl, Portsmouth, NH 03801' | url_encode}}+()&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
         </iframe>
     </div>
-    {{page_data.review}}
+    <br/>
+    <p>{{page_data.notes}}</p>
 </div>
 <div class="page">
     <p class="section-title">Menu Items</p>
